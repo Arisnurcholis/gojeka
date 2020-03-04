@@ -192,81 +192,11 @@ function claims($token,$voc)
         }
     }
 
-    function claim1($token)
-    {
-    $data = '{"promo_code":"GOFOODSANTAI11"}';    
-    $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
-    if ($claim['success'] == 1)
-        {
-        return $claim['data']['message'];
-        }
-      else
-        {
-      save("error_log.txt", json_encode($claim));
-        return false;
-        }
-    }
-    function claim2($token)
-    {
-    $data = '{"promo_code":"GOFOODSANTAI08"}';    
-    $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
-    if ($claim['success'] == 1)
-        {
-        return $claim['data']['message'];
-        }
-      else
-        {
-      save("error_log.txt", json_encode($claim));
-        return false;
-        }
-    }
-     function ride($token)
-    {
-    $data = '{"promo_code":"COBAINGOJEK"}';    
-    $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
-    if ($claim['success'] == 1)
-        {
-        return $claim['data']['message'];
-        }
-      else
-        {
-      save("error_log.txt", json_encode($claim));
-          return false;
-        }
-    }
-     function cekvocer($token)
-    {
-    $data = '{"promo_code":"AYOCOBAGOJEK"}';    
-    $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
-    if ($claim['success'] == 1)
-        {
-        return $claim['data']['message'];
-        }
-      else
-        {
-      save("error_log.txt", json_encode($claim));
-        return false;
-        }
-    }
-     function pengen($token)
-    {
-    $data = '{"promo_code":"G-7RCBDYN"}';    
-    $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
-    if ($claim['success'] == 1)
-        {
-        return $claim['data']['message'];
-        }
-      else
-        {
-      save("error_log.txt", json_encode($claim));
-        return false;
-        }
-    }
 
 function reff($token)
     {
     $data = '{"referral_code":"G-JQ8G8D3"}';    
-    $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
+    $claim = request("/customer_referrals/v1/campaign/enrollment", $token, $data);
     if ($claim['success'] == 1)
         {
         return $claim['data']['message'];
